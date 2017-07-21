@@ -11,6 +11,11 @@ public class Solution476 {
 
     }
 
+    /**
+     * methord1
+     * @param num
+     * @return
+     */
     public static int findComplement(int num){
         String a = Integer.toBinaryString(num);
         String b = Integer.toBinaryString(~num);
@@ -26,6 +31,11 @@ public class Solution476 {
         return result;
     }
 
+    /**
+     * methord2
+     * @param num
+     * @return
+     */
     public static int findComplement2(int num){
         //System.out.println(Integer.toBinaryString(~num));
         //System.out.println(Integer.toBinaryString(Integer.highestOneBit(num)));
