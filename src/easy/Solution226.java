@@ -15,9 +15,9 @@ public class Solution226 {
         if(root == null) {
             return root;
         }
-        
-        root.left = invertTree(root.right);
-        root.right = invertTree(root.left);
+        TreeNode t = root;
+        root.left = invertTree(t.right);
+        root.right = invertTree(t.left);
         return root;
     }
 }

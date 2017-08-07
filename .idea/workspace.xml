@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="073f3053-4392-4c28-92fa-6aaa40bf081c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/easy/Solution226.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/easy/Solution226.java" afterPath="$PROJECT_DIR$/src/easy/Solution226.java" />
     </list>
     <ignored path="leetcode.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="Solution226.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/easy/Solution226.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="20" selection-end-column="20" />
+            <state relative-caret-position="418">
+              <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -752,12 +751,12 @@
       <workItem from="1501571795024" duration="10316000" />
       <workItem from="1501723472979" duration="5102000" />
       <workItem from="1502020533433" duration="4969000" />
-      <workItem from="1502084338396" duration="7270000" />
+      <workItem from="1502084338396" duration="7542000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121668000" />
+    <option name="totallyTimeSpent" value="121940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="428" y="0" width="1932" height="1038" extended-state="0" />
@@ -1098,8 +1097,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/easy/Solution226.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="20" selection-end-column="20" />
+        <state relative-caret-position="418">
+          <caret line="19" column="40" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
           <folding />
         </state>
       </provider>
