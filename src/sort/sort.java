@@ -4,9 +4,10 @@ package sort;
  * Created by lenovo on 2017/7/21.
  */
 public class sort {
+
     public static void main(String args[]){
         int[] a = {1,5,3,2,6,4,5};
-        int[] result = bubbleSort(a);
+        int[] result = quickSort(a);
     }
 
     /**
@@ -45,6 +46,11 @@ public class sort {
         return num;
     }
 
+    /**
+     * 选择排序
+     * @param num
+     * @return
+     */
     public static int[] selectionSort(int[] num){
         for(int i = 0; i < num.length - 1; i++){
             int min = i;
@@ -60,5 +66,36 @@ public class sort {
             }
         }
         return num;
+    }
+
+    /**
+     * 快速排序
+     * @param num
+     * @return
+     */
+    public static int[] quickSort(int[] num){
+         partion(num, 0, num.length - 1);
+         return num;
+    }
+
+    public static void partion(int[] num, int low,int high ){
+        if(low >= high) return;
+        int key = num[low];
+        int start = low;
+        int end = high;
+        while (start < end){
+            while (start < end && num[end] > key){
+                end--;
+            }
+            num[start] = num[end];
+
+            while (start < end && num[start] <= key){
+                start ++;
+            }
+            num[end] = num[start];
+        }
+        num[start] = key;
+        partion(num, low, start - 1);
+        partion(num, start + 1, high);
     }
 }
