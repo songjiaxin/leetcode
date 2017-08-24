@@ -11,8 +11,8 @@ public class Solution538 {
       TreeNode(int x) { val = x; }
     }
 
-    private static int  sum = 0;
-    public static TreeNode convertBST(TreeNode root) {
+    private  int  sum = 0;
+    public  TreeNode convertBST(TreeNode root) {
         if(root == null) return root;
 
         convertBST(root.right);
@@ -21,13 +21,6 @@ public class Solution538 {
         sum += val;
         convertBST(root.left);
         return root;
-    }
-
-    public static void main(String args[]){
-        TreeNode root = new TreeNode(2);
-        root.left = new TreeNode(1);
-        root.right = new TreeNode(3);
-        root = convertBST(root);
     }
 
 
