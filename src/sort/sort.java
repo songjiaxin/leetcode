@@ -7,7 +7,7 @@ public class sort {
 
     public static void main(String args[]){
         int[] a = {1,5,3,2,6,4,5};
-        int[] result = quickSort(a);
+        int[] result = mergeSort(0, 6, a);
     }
 
     /**
@@ -55,7 +55,7 @@ public class sort {
         for(int i = 0; i < num.length - 1; i++){
             int min = i;
             for(int j = i + 1; j < num.length; j++){
-                if(num[j] < num[i]){
+                if(num[j] < num[min]){
                     min = j;
                 }
             }
@@ -98,4 +98,54 @@ public class sort {
         partion(num, low, start - 1);
         partion(num, start + 1, high);
     }
+
+    public static int[] mergeSort(int start, int end, int num[]){
+        int mid = (start + end) / 2;
+        if (start < end){
+            mergeSort(start, mid, num);
+            mergeSort(mid + 1, end, num);
+            merge(start, mid , end, num);
+        }
+
+        return num;
+    }
+
+    public static void merge(int n1, int n2, int n3, int[] num){
+        int[] temp = new int[n3 - n1 + 1];
+        int i = n1;
+        int j = n2 + 1;
+        int k = 0;
+        while (i <= n2 && j <= n3){
+            if(num[i] <= num[j]){
+                temp[k] = num[i];
+                i++;
+            }else {
+                temp[k] = num[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= n2){
+            temp[k] = num[i];
+            i++;
+            k++;
+        }
+
+        while (j <= n3){
+            temp[k] = num[j];
+            j++;
+            k++;
+        }
+
+        k=0;
+        for(int p = n1; p <= n3; p++){
+            num[p] = temp[k];
+            k++;
+        }
+
+        return ;
+    }
+
+
 }
