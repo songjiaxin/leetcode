@@ -7,7 +7,10 @@ public class sort {
 
     public static void main(String args[]){
         int[] a = {1,5,3,2,6,4,5};
-        int[] result = mergeSort(0, 6, a);
+        int[] result = heapSort(a);
+        for(int r : result){
+            System.out.println(r);
+        }
     }
 
     /**
@@ -99,6 +102,13 @@ public class sort {
         partion(num, start + 1, high);
     }
 
+    /**
+     * 归并排序
+     * @param start
+     * @param end
+     * @param num
+     * @return
+     */
     public static int[] mergeSort(int start, int end, int num[]){
         int mid = (start + end) / 2;
         if (start < end){
@@ -145,6 +155,53 @@ public class sort {
         }
 
         return ;
+    }
+
+    /**
+     * 堆排序
+     * @param num
+     * @return
+     */
+    public static int[] heapSort(int[] num){
+        if(num == null || num.length < 2){
+            return num;
+        }
+        constructHeap(num);
+
+        for(int i = num.length - 1; i >=0; i--){
+            int temp = num[0];
+            num[0] = num[i];
+            num[i] = temp;
+            reviseHeap(num, i, 0);
+        }
+
+        return num;
+    }
+
+    public static void constructHeap(int[] num){
+        int p = (num.length - 2) / 2;
+        for(int i = p; i >= 0; i--){
+            reviseHeap(num,num.length, i);
+        }
+    }
+
+    public static void reviseHeap(int[] num, int heapSize,int p){
+        int min = num[p];
+        int newP = p;
+        if(2 * p + 1 < heapSize && num[2 * p + 1] < min){
+            min = num[2 * p + 1];
+            newP = 2 * p + 1;
+        }
+        if(2 * p  + 2< heapSize && num[ 2 * p + 2] < min){
+            min = num[ 2 * p + 2];
+            newP = 2 * p + 2;
+        }
+        if(min != num[p]){
+            num[newP] = num[p];
+            num[p] = min;
+            reviseHeap(num, heapSize, newP);
+        }
+
     }
 
 
